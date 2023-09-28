@@ -1,4 +1,4 @@
-package MiParte00;/*
+package ParteAlejandro00;/*
 Escribe un programa que calcule el total de una factura
 a partir de la base imponible (precio sin
 IVA). La base imponible estará almacenada en una variable.
