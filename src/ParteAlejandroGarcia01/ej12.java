@@ -39,7 +39,7 @@ TOTAL
  */
 public class ej12 {
 
-    public static String significadoCodigo(String codigoPromocional) {
+    public static String v(String codigoPromocional) {
         String resultado = "";
         if(Objects.equals(codigoPromocional, "nopro")) {
             resultado += "No se aplica promoción";
@@ -69,7 +69,9 @@ public class ej12 {
             conIVA += baseImponible * 1.04;
         }
 
+        // Ahora aplicamos códigos de descuento si corresponde
         return conIVA;
+
     }
 
     public static void main(String[] args) {
