@@ -1,4 +1,4 @@
-package ParteAlejandro00;
+package ParteAlejandroGarcia00;
 
 /*Ejercicio 4
 Realiza un conversor de euros a pesetas.
