@@ -5,7 +5,7 @@ IVA). La base imponible estará almacenada en una variable.
 
  */
 
-public class ejercicio6 {
+public class ej6 {
 
     public static double totalFactura(double baseImponible) {
         return baseImponible * 1.21;

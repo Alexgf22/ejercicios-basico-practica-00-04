@@ -5,7 +5,7 @@ forma que el resultado del programa sea el mismo
 que en el ejercicio 1 del capítulo 1.
  */
 
-public class ejercicio2 {
+public class ej2 {
 
     public static void main(String[] args) {
         String nombreCompleto = "Alejandro García Fernández";
