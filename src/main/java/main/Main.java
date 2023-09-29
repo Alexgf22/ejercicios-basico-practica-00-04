@@ -3,8 +3,10 @@ package main;
 import menu.Menu;
 import ui.IO;
 import ui.Validation;
-import Exercise.*;
+import exercise.*;
 
+
+//TODO I thinnk the way I get and use the inputs could be improved
 public class Main {
     protected IO io;
     protected Validation validation;

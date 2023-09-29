@@ -1,6 +1,6 @@
 package menu;
 
-import Exercise.*;
+import exercise.*;
 import ui.IO;
 import java.util.List;
 
@@ -14,27 +14,23 @@ public abstract class Menu {
     }
 
     public void menuListGroups() {
-        StringBuilder groupsString = new StringBuilder();
         int i = 0;
         for (Group group : allGroups) {
-            groupsString.append(String.format("%d - %s\n", i, group.getName()));
-            groupsString.append(group.getDescription());
-            groupsString.append("\n");
+            io.write(String.format("%d - %s\n", i, group.getName()));
+            io.write(group.getDescription());
+            io.write("\n");
             i = i + 1;
         }
-        io.write(groupsString.toString());
     }
 
     public void menuListExercises(int group) {
-        StringBuilder exerciseString = new StringBuilder();
         int i = 0;
         for (Exercise exercise : allGroups.get(group).getExercises()) {
-            exerciseString.append(String.format("%d - %s\n", i, exercise.getName()));
-            exerciseString.append(exercise.getDescription());
-            exerciseString.append("\n");
+            io.write(String.format("%d - %s\n", i, exercise.getExerciseName()));
+            io.write(exercise.getDescription());
+            io.write("\n");
             i = i + 1;
         }
-        io.write(exerciseString.toString());
     }
     
     public Exercise selectExercise(int group, int exercise) {

@@ -1,21 +1,29 @@
 package ex_entrada_salida;
 
-import java.util.Scanner;
+import exercise.*;
+import ui.IO;
+import ui.Validation;
 
-public class Exercise7 {
+import java.util.ArrayList;
+
+public class Exercise7 extends Exercise {
+
+    String exerciseName = "Exercise7";
+    String description = "Escribe un programa que calcule el total de una factura a partir de la base imponible.";
+
+    {
+        question.add("How much was the bill?");
+        question.add("How much is the tax?");
+    }
+    public Exercise7(IO io) {
+        super(io);
+    }
 
     public void run() {
-        try {
-            Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-            System.out.println("How much was the bill");
-            String bill = myObj.nextLine();  // Read user input
+        ArrayList<String> inputs = getInputs();
+        int bill = Validation.getInt(inputs.get(0));
+        int tax = Validation.getInt(inputs.get(1))/100;
 
-            double tax = 0.7;
-
-            System.out.println(Double.parseDouble(bill) + (Double.parseDouble(bill) * tax));
-
-        } catch (NumberFormatException e) {
-            System.out.println("The quantity you typed was incorrect");
-        }
+        io.write(String.format("The total of the bill %d plus the tax of %d percent is %.2f", bill, tax,((float) bill + bill*tax)));
     }
 }

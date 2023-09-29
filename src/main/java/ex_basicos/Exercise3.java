@@ -1,6 +1,6 @@
 package ex_basicos;
 
-import Exercise.*;
+import exercise.*;
 import ui.IO;
 
 public class Exercise3 extends Exercise {
@@ -10,12 +10,11 @@ public class Exercise3 extends Exercise {
     private String phone = "686-336-555";
 
     String exerciseName = "Exercise 3";
-    String description = "Crea las variables nombre, direccion y telefono y asígnale los valores corres- pondientes.";
-    String question = """
-            Muestra
-            los valores de esas variables por pantalla de tal forma que el resultado del programa sea el mismo
-            que en el ejercicio 2.
-            """;
+    String description = """
+Crea las variables nombre, direccion y telefono y asígnale los valores corres- pondientes.
+Muestra
+los valores de esas variables por pantalla de tal forma que el resultado del programa sea el mismo
+que en el ejercicio 2.""";
 
     public Exercise3(IO io) {
         super(io);

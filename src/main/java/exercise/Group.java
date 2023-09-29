@@ -1,6 +1,5 @@
-package Exercise;
+package exercise;
 
-import java.util.AbstractMap;
 import java.util.List;
 
 public class Group {
@@ -16,7 +15,7 @@ public class Group {
         return this.name;
     }
 
-    public Object getDescription() {
+    public String getDescription() {
         return this.description;
     }
 

@@ -1,10 +1,7 @@
 package ex_basicos;
 
-import Exercise.*;
-import java.util.Collections;
+import exercise.*;
 import ui.IO;
-
-import java.util.List;
 
 public class Exercise1 extends Exercise {
     private static final int X = 144;
@@ -13,10 +10,7 @@ public class Exercise1 extends Exercise {
     String exerciseName = "Exercise 1";
     String description = """
 Escribe un programa en el que se declaren las variables enteras x e y. Asignales los valores 144 y
-999 respectivamente.
-""";
-    String question = """
-            A continuación, muestra por pantalla el valor de cada variable, la suma, la
+999 respectivamente. A continuación, muestra por pantalla el valor de cada variable, la suma, la
 resta, la división y la multiplicación.
 """;
 

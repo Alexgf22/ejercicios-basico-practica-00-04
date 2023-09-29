@@ -1,7 +1,8 @@
 package ui;
 
 public class Validation {
-    public static int getInt(String string) {
+    //TODO Check and rework complexity
+    public static int getInt(String string)  throws NumberFormatException {
         Integer input = null;
         while (input == null) {
             try {
