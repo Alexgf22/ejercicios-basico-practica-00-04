@@ -39,7 +39,8 @@ TOTAL
  */
 public class ej12 {
 
-    public static String v(String codigoPromocional) {
+    // Significado de códigos promocionales
+    /*public static String significadoCodigo(String codigoPromocional) {
         String resultado = "";
         if(Objects.equals(codigoPromocional, "nopro")) {
             resultado += "No se aplica promoción";
@@ -55,9 +56,27 @@ public class ej12 {
             resultado += "No hay descuento";
         }
         return resultado;
+    }*/
+
+    // Calculamos el IVA del producto
+    public static double calcularIVA(double baseImponible, String tipoIva) {
+        double iva = 0.0;
+        if(Objects.equals(tipoIva, "general")) {
+            iva += baseImponible * 0.21;
+        }
+        else if(Objects.equals(tipoIva, "reducido")) {
+            iva += baseImponible * 0.1;
+        }
+        else if(Objects.equals(tipoIva, "superreducido")) {
+            iva += baseImponible * 0.04;
+        }
+        iva = Math.round(iva);
+
+        return iva;
     }
 
-    public static double calcularPrecioFinal(double baseImponible, String tipoIva, String codigoPromocional) {
+    // Calculamos el precio final tras añadir el IVA
+    public static double calcularPrecioConIVA(double baseImponible, String tipoIva) {
         double conIVA = 0.0;
         if(Objects.equals(tipoIva, "general")) {
             conIVA += baseImponible * 1.21;
@@ -68,8 +87,30 @@ public class ej12 {
         else if(Objects.equals(tipoIva, "superreducido")) {
             conIVA += baseImponible * 1.04;
         }
+        conIVA = Math.round(conIVA);
 
-        // Ahora aplicamos códigos de descuento si corresponde
+        // Devolvemos el precio con IVA
+        return conIVA;
+
+    }
+
+    // Aplicamos descuento que requiera
+    public static double precioFinalConDescuento(String codigoPromocional, double baseImponible, String tipoIva) {
+        double conIVA = calcularPrecioConIVA(baseImponible, tipoIva);
+        // Ahora al precio con IVA le aplicamos el descuento si corresponde
+        if (Objects.equals(codigoPromocional, "mitad")) {
+            conIVA = conIVA / 2;
+        }
+        else if(Objects.equals(codigoPromocional, "meno5")) {
+            conIVA -= 5;
+        }
+        else if(Objects.equals(codigoPromocional, "5porc")) {
+            conIVA -= (conIVA * ((double) 5 / 100));
+        }
+        else {
+            conIVA -= 0;
+        }
+
         return conIVA;
 
     }
@@ -81,16 +122,42 @@ public class ej12 {
         int baseImponible = scanner.nextInt();
 
         System.out.print("Introduzca el tipo de IVA (general, reducido o superreducido): ");
-        String tipoIVA = String.valueOf(scanner.nextInt());
+        String tipoIVA = scanner.next();
+
+        int porcentajeIVA = 0;
+        if (Objects.equals(tipoIVA, "general")) {
+            porcentajeIVA += 21;
+        }
+        else if (Objects.equals(tipoIVA, "reducido")) {
+            porcentajeIVA += 10;
+        }
+        else if (Objects.equals(tipoIVA, "superreducido")) {
+            porcentajeIVA += 4;
+        }
+
 
         System.out.print("Introduzca el código promocional (nopro, mitad, meno5 o 5porc): ");
-        String códigoPromocional = String.valueOf(scanner.nextInt());
+        String codigoPromocional = scanner.next();
 
-        System.out.println("Base imponible \n");
-        System.out.println("IVA (%) \n");
-        System.out.println("Precio con IVA \n");
-        System.out.println("Cód. promo. : \n");
-        System.out.println("TOTAL \n");
+        double cantidadDescuento = 0;
+        if (Objects.equals(codigoPromocional, "nopro")) {
+            cantidadDescuento += 0;
+        }
+        else if (Objects.equals(codigoPromocional, "mitad")) {
+            cantidadDescuento += calcularPrecioConIVA(baseImponible, tipoIVA) / 2;
+        }
+        else if (Objects.equals(codigoPromocional, "meno5")) {
+            cantidadDescuento -= 5;
+        }
+        else if (Objects.equals(codigoPromocional, "5porc")) {
+            cantidadDescuento -= (calcularPrecioConIVA(baseImponible, tipoIVA) * ((double) 5 / 100));
+        }
+
+        System.out.println("Base imponible \n"+ baseImponible);
+        System.out.println("IVA (" + porcentajeIVA + "%) \n" + calcularIVA(baseImponible,tipoIVA));
+        System.out.println("Precio con IVA \n" + calcularPrecioConIVA(baseImponible, tipoIVA));
+        System.out.println("Cód. promo. (" + codigoPromocional + "): " + "-" + cantidadDescuento);
+        System.out.println("TOTAL \n" + precioFinalConDescuento(codigoPromocional, baseImponible, tipoIVA));
 
         scanner.close();
     }
