@@ -1,14 +1,17 @@
 package menu;
 
 import exercise.*;
+import group.Group;
 import ui.IO;
+
+import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Menu {
-    private final List<Group> allGroups;
+public class Menu {
+    private ArrayList<Group> allGroups = new ArrayList();
     private final IO io;
 
-    public Menu(List<Group> groupList, IO io) {
+    public Menu(ArrayList<Group> groupList, IO io) {
         this.allGroups = groupList;
         this.io = io;
     }

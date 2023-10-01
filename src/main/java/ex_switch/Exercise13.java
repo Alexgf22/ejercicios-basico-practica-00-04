@@ -6,7 +6,7 @@ import ui.Validation;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Exerecise13 extends Exercise {
+public class Exercise13 extends Exercise {
     String exerciseName = "Exerecise 13";
     String descreiption = "Escribe un programa que ordene tres números enteros introducidos por teclado.";
     {
@@ -14,7 +14,7 @@ public class Exerecise13 extends Exercise {
         question.add("Introduce the second number");
         question.add("Introduce the third number");
     }
-    public Exerecise13(IO io) {
+    public Exercise13(IO io) {
         super(io);
     }
 
