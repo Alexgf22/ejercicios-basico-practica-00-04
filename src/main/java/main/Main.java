@@ -1,6 +1,5 @@
 package main;
 
-
 import group.*;
 import menu.Menu;
 import ui.IO;
@@ -9,7 +8,10 @@ import ui.console.Consoleio;
 import java.util.ArrayList;
 import java.util.Objects;
 
-//TODO I think the way I get and use the inputs could be improved
+/**
+ * This is the main class of the program responsible for executing exercises
+ * from various groups through a menu system.
+ */
 public class Main {
     public static void main(String[] args) {
 
@@ -17,6 +19,7 @@ public class Main {
         IO io = new Consoleio();
         Validation validation = new Validation();
 
+        // Create instances of different exercise groups
         final Group groupBasico = new GroupBasicos();
         groupBasico.add(
                 new ex_basicos.Exercise1(io),

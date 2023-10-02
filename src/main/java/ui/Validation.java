@@ -1,12 +1,22 @@
 package ui;
 
+/**
+ * Utility class for input validation.
+ */
 public class Validation {
-    //TODO Check and rework complexity
-    public static int getInt(String string)  throws NumberFormatException {
+
+    /**
+     * Parse an integer from a string input, and keep prompting the user until a valid integer is provided.
+     *
+     * @param string The string input to be parsed as an integer.
+     * @return The parsed integer value.
+     * @throws NumberFormatException if the input is not a valid integer.
+     */
+    public static int getInt(String string) throws NumberFormatException {
         Integer input = null;
         while (input == null) {
             try {
-                input = Integer.parseInt(string);  // Read user input
+                input = Integer.parseInt(string);  // Parse user input as an integer
             } catch (NumberFormatException e) {
                 System.out.println("The number you entered was incorrect");
             }

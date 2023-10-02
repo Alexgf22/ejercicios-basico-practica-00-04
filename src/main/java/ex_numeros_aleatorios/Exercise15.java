@@ -51,7 +51,7 @@ public class Exercise15 extends Exercise {
             if (i % 4 == 0) {
                 melody.append("|");
             }
-            melody.append(notePicker());
+            melody.append(notePicker()).append(" ");
         }
         melody.append("||");
         io.write(melody.toString());
