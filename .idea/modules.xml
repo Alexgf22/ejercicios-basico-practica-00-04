@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ejercicios-basico-practica-00.iml" filepath="$PROJECT_DIR$/ejercicios-basico-practica-00.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reloj_de_cita.iml" filepath="$PROJECT_DIR$/.idea/modules/reloj_de_cita.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reloj_de_cita.main.iml" filepath="$PROJECT_DIR$/.idea/modules/reloj_de_cita.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/reloj_de_cita.test.iml" filepath="$PROJECT_DIR$/.idea/modules/reloj_de_cita.test.iml" />
     </modules>
   </component>
 </project>

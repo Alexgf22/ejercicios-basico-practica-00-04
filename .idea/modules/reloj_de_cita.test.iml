@@ -16,8 +16,5 @@
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.jupiter:junit-jupiter-engine:5.9.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.platform:junit-platform-engine:1.9.1" level="project" />
   </component>
-  <component name="SonarLintModuleSettings">
-    <option name="uniqueId" value="ca436bbb-1d34-4f85-92dc-0f81a1dfca22" />
-  </component>
   <component name="TestModuleProperties" production-module="reloj_de_cita.main" />
 </module>
