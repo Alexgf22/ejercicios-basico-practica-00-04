@@ -28,7 +28,7 @@ public class Exercise13 extends Exercise {
         int num2 = Validation.getInt(inputs.get(1));
         int num3 = Validation.getInt(inputs.get(2));
 
-        io.write(String.format("The correct order of the numberes you introduced is %d", order(num1, num2, num3)));
+        io.write(String.format("The correct order of the numbers you introduced is %s", order(num1, num2, num3)));
     }
 
     private ArrayList<Integer> order(int num1, int num2, int num3) {

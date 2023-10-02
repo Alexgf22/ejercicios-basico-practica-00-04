@@ -5,6 +5,7 @@ import ui.IO;
 import ui.Validation;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Exercise21 extends Exercise {
     String exerciseName = "Exercise 21";
@@ -39,7 +40,7 @@ public class Exercise21 extends Exercise {
         ArrayList<String> inputs = getInputs();
         int test1 = Validation.getInt(inputs.get(0));
         int test2 = Validation.getInt(inputs.get(1));
-        Boolean recup = inputs.get(2) == "apto";
+        Boolean recup = Objects.equals(inputs.get(2), "apto");
 
         io.write("Your grade in programming is " + calculateGrade(test1, test2, recup));
     }

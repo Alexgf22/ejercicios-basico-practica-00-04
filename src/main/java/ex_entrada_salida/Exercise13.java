@@ -26,10 +26,6 @@ public class Exercise13 extends Exercise {
         super(io);
     }
 
-    private double calculateGrade(int firstMark, int expectedMark) {
-            return (expectedMark - (firstMark * .4)) / .6;
-    }
-
     //TODO Update to getDouble
     @Override
     public void run() {
@@ -38,6 +34,11 @@ public class Exercise13 extends Exercise {
         int expectedMark = Validation.getInt(inputs.get(1));
         double grade = calculateGrade(firstMark, expectedMark);
 
-        io.write(String.format("To get a mark of %d this trimester you need to score a %d on the second exam.", expectedMark, grade));
+        io.write(String.format("To get a mark of %d this trimester you need to score a %.1f on the second exam.", expectedMark, grade));
+    }
+
+    private double calculateGrade(int firstMark, int expectedMark) {
+
+        return (expectedMark - (firstMark * .4)) / .6;
     }
 }

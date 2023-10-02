@@ -21,12 +21,13 @@ public class Exercise5 extends Exercise {
         int total = 0;
         int max = 0;
         int min = 0;
-        double number = 0;
+        int number = 0;
         StringBuilder result = new StringBuilder();
 
         for (int i = 0; i < 50; i++) {
-            number = (Math.random()*100) + 100;
-            total += number;
+            number = (int) Math.round((Math.random()*100) + 100);
+            io.write(String.format("%s", number));
+            total = (int) (total + number);
             if (number > max) {
                 max = (int) number;
             }
@@ -35,6 +36,7 @@ public class Exercise5 extends Exercise {
             }
             result.append(number + " ");
         }
-        result.append(String.format("The max number is %d, The minimum number is %d, adn their average is %d", max, min, (max + min) / 2));
+        io.write(String.format("The max number is %d, The minimum number is %d, adn their average is %d", max, min, (max + min) / 2));
+        io.write(result.toString());
     }
 }

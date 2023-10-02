@@ -49,7 +49,7 @@ public class Exercise15 extends Exercise {
 
         for (int i = 0; i < melodyLength; i++) {
             if (i % 4 == 0) {
-                melody.append("|");
+                melody.append("| ");
             }
             melody.append(notePicker()).append(" ");
         }

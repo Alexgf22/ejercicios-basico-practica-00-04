@@ -27,6 +27,6 @@ public class Exercise11 extends Exercise {
         ArrayList<String> inputs = getInputs();
 
         int kb = Validation.getInt(inputs.get(0));
-        io.write(String.format("%d Kb to Mb: %f", kb, conversion(kb)));
+        io.write(String.format("%d Kb to Mb: %.2f", kb, conversion(kb)));
     }
 }

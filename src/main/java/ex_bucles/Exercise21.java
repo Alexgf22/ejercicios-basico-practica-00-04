@@ -38,12 +38,12 @@ public class Exercise21 extends Exercise {
             if (number % 2 == 0) {
                 if (number > even) {
                     even = number;
-                } else {
-                    oddCount++;
-                    odd += number;
                 }
-                count++;
+            } else if (number >= 0){
+                oddCount++;
+                odd = odd + number;
             }
+            count++;
         }
         io.write(String.format("There were %d numbers introduced, the largest even number was %d, and the average of the odd numbers was %d",
                 count, even, odd / oddCount));

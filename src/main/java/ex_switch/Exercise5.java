@@ -13,6 +13,8 @@ public class Exercise5 extends Exercise {
     {
         setExerciseName(exerciseName);
         setDescription(description);
+        question.add("Enter the value of a:");
+        question.add("Enter the value of b:");
     }
 
     public Exercise5(IO io) {
@@ -32,3 +34,4 @@ public class Exercise5 extends Exercise {
         io.write(String.format("The solution for %dx + %d = 0 is %f", a, b, equation(a, b)));
     }
 }
+

@@ -24,8 +24,12 @@ public class Exercise7 extends Exercise {
     public void run() {
         ArrayList<String> inputs = getInputs();
         int bill = Validation.getInt(inputs.get(0));
-        int tax = Validation.getInt(inputs.get(1))/100;
+        int tax = Validation.getInt(inputs.get(1));
 
-        io.write(String.format("The total of the bill %d plus the tax of %d percent is %.2f", bill, tax,((float) bill + bill*tax)));
+        io.write(String.format("The total of the bill %d plus the tax of %d percent is %.2f", bill, tax,calculatePrice(bill, tax)));
+    }
+
+    private double calculatePrice(int bill, int tax) {
+        return (bill + (bill*((double) tax /100)));
     }
 }

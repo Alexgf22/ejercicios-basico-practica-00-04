@@ -16,9 +16,7 @@ public class Exercise1 extends Exercise {
     @Override
     public void run() {
         for (int i = 0; i < 100; i++) {
-            if (i % 5 == 0) {
-                io.write(Integer.toString(timesFive(i)));
-            }
+            io.write(Integer.toString(timesFive(i)));
         }
     }
 

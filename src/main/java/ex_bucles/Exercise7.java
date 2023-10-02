@@ -18,7 +18,7 @@ public class Exercise7 extends Exercise {
     {
         setExerciseName(exerciseName);
         setDescription(description);
-        question.add("Input a combination to attempt to open the safe.");
+        question.add("Input a 4 number combination to attempt to open the safe.");
     }
     public Exercise7(IO io) {
         super(io);

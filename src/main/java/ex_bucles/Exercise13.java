@@ -41,5 +41,6 @@ public class Exercise13 extends Exercise {
                 negatives.addAndGet(1);
             }
         });
+        io.write(String.format("There are %d positive numbers and %d negative numbers.", positives.get(), negatives.get()));
     }
 }

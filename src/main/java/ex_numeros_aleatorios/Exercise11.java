@@ -39,7 +39,7 @@ public class Exercise11 extends Exercise {
     public void run() {
         int index;
         for (int i = 0; i < 20; i++) {
-            index = (int) Math.round(Math.random() * notas.size());
+            index = (int) Math.floor(Math.random() * notas.size());
             io.write(notas.get(index));
             occurences.set(index, occurences.get(index) + 1);
         }

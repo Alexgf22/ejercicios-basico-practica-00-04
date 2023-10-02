@@ -31,7 +31,7 @@ public class Exercise15 extends Exercise {
         int exponent = Validation.getInt(inputs.get(1));
 
         for (int i = 1; i <= exponent; i++) {
-            io.write(String.format("The base %d to the power of %d equals %s", base, i, Math.pow(base, i)));
+            io.write(String.format("The base %d to the power of %d equals %s", base, i, Math.round(Math.pow(base, i))));
         }
     }
 }

@@ -26,9 +26,10 @@ public class Exercise17 extends Exercise {
     public void run() {
         ArrayList<String> inputs = getInputs();
         int number = Validation.getInt(inputs.get(0));
+        int result = 0;
         for (int i = 1; i <= 100; i++) {
-            number += number + i;
+            result = result + (number + i);
         }
-        io.write("The number summed with the 100 following numbers equals " + number);
+        io.write("The number summed with the 100 following numbers equals " + result);
     }
 }

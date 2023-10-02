@@ -14,7 +14,7 @@ public class Exercise17 extends Exercise {
     {
         setExerciseName(exerciseName);
         setDescription(description);
-        question.add("Inntroduce a number");
+        question.add("Introduce a number");
     }
 
     public Exercise17(IO io) {
@@ -26,7 +26,7 @@ public class Exercise17 extends Exercise {
         ArrayList<String> inputs = getInputs();
 
         int number = Validation.getInt(inputs.get(0));
-        io.write("The last digit in the number you introduced is " + number);
+        io.write("The last digit in the number you introduced is " + findLastNumber(number));
     }
 
     private int findLastNumber(int number) {

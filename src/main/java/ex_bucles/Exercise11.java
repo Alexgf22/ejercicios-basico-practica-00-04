@@ -27,7 +27,7 @@ public class Exercise11 extends Exercise {
 
         for (int i = 0; i < 5; i++) {
             io.write("Number/Squared/Cubed");
-            io.write(String.format("%d/%s/%s", number + i, Math.pow(number + i, 2), Math.pow(number + i, 3)));
+            io.write(String.format("%d/%s/%s", number + i, Math.round(Math.pow(number + i, 2)), Math.round(Math.pow(number + i, 3))));
         }
     }
 }

@@ -5,8 +5,7 @@ import ui.IO;
 
 public class Exercise19 extends Exercise {
     String exerciseName = "Exercise 19";
-    String description = "Realiza un programa que pinte una pirámide por pantalla. La altura se debe pedir por teclado. El\n" +
-            "carácter con el que se pinta la pirámide también se debe pedir por teclado.";
+    String description = "This exercise is not implemented yet.";
 
     {
         setExerciseName(exerciseName);
