@@ -2,7 +2,8 @@ package AlejandroGarcia.ParteAlejandroGarcia02;
 
 import java.util.Scanner;
 
-// TODO exportar la nota media del ej 7 de maurice
+import static AlejandroGarcia.ParteAlejandroGarcia02.obtengoNotaMedia.calcularNotaMedia;
+
 public class notaFinalBoletin {
 
     public static String calcularNotaBoletin(double notaMedia) {
@@ -26,9 +27,17 @@ public class notaFinalBoletin {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Introduce la nota media: ");
 
-        double notaMedia = scanner.nextInt();
+        System.out.print("Introduce la primera nota: ");
+        int primeraNota = scanner.nextInt();
+
+        System.out.print("Introduce la segunda nota: ");
+        int segundaNota = scanner.nextInt();
+
+        System.out.print("Introduce la tercera nota: ");
+        int terceraNota = scanner.nextInt();
+
+        double notaMedia = calcularNotaMedia(primeraNota, segundaNota, terceraNota);
         System.out.println(calcularNotaBoletin((notaMedia)) );
         scanner.close();
     }
