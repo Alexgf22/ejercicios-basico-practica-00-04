@@ -11,6 +11,8 @@ public class Exercise19 extends Exercise {
     String description = "Realiza un programa que nos diga cuántos dígitos tiene un número entero que puede ser positivo\n" +
             "o negativo. Se permiten números de hasta 5 dígitos.";
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("Introduce a number to find its length.");
     }
     public Exercise19(IO io) {

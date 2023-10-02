@@ -1,4 +1,4 @@
-package ex_numAleatorios;
+package ex_numeros_aleatorios;
 
 import exercise.Exercise;
 import ui.IO;
@@ -8,6 +8,11 @@ public class Exercise9 extends Exercise {
     String description = "Realiza un programa que vaya generando números aleatorios pares entre 0 y 100 y que no termine\n" +
             "de generar números hasta que no saque el 24. El programa deberá decir al final cuántos números\n" +
             "se han generado.";
+
+    {
+        setExerciseName(exerciseName);
+        setDescription(description);
+    }
     public Exercise9(IO io) {
         super(io);
     }

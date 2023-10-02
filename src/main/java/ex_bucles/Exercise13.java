@@ -12,6 +12,8 @@ public class Exercise13 extends Exercise {
     String description = "Escribe un programa que lea una lista de diez números y determine cuántos son positivos, y cuán-\n" +
             "tos son negativos.";
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("Introduce a number");
         question.add("Introduce a number");
         question.add("Introduce a number");

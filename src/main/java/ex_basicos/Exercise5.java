@@ -8,13 +8,12 @@ import static java.lang.Math.round;
 
 public class Exercise5 extends Exercise {
 
-
-    String description = """
+    {
+        setExerciseName("Exercise 5");
+        setDescription("""
             Realiza un conversor de pesetas a euros. La cantidad en pesetas que se quiere convertir deberá
             estar almacenada en una variable.
-            """;
-
-    {
+            """);
         question.add("Enter the quantity of pesetas you would like to convert: ");
     }
 

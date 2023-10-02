@@ -1,9 +1,8 @@
-package ex_numAleatorios;
+package ex_numeros_aleatorios;
 
 import exercise.Exercise;
 import ui.IO;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Exercise11 extends Exercise {
@@ -12,6 +11,10 @@ public class Exercise11 extends Exercise {
             "forma: suspenso, suficiente, bien, notable o sobresaliente. Al final aparecerá el número de suspen-\n" +
             "sos, el número de suficientes, el número de bienes, etc.";
 
+    {
+        setExerciseName(exerciseName);
+        setDescription(description);
+    }
     ArrayList<String> notas = new ArrayList<String>();
     {
         notas.add("Suspenso");

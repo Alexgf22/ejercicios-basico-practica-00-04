@@ -26,8 +26,16 @@ public abstract class Exercise {
         return exerciseName;
     }
 
+    public void setExerciseName(String exerciseName) {
+        this.exerciseName = exerciseName;
+    }
+
     public String getDescription() {
         return description;
+    }
+
+    public void setDescription(String description) {
+    this.description = description;
     }
 
     protected ArrayList<String> getInputs() {

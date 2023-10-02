@@ -9,8 +9,12 @@ import java.util.ArrayList;
 import static java.lang.Math.round;
 
 public class Exercise3 extends Exercise {
-
+    String exerciseName = "Exercise 3";
+    String description = "Realiza un conversor de pesetas a euros. La cantidad de pesetas que se quiere convertir debe ser\n" +
+            "introducida por teclado";
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("Enter quantity of pesetas");
     }
 

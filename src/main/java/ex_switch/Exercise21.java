@@ -21,7 +21,10 @@ public class Exercise21 extends Exercise {
             de Programación es 5 Ejemplo 3: Nota del primer control: 6 Nota del segundo control: 3 ¿Cuál ha
             sido el resultado de la recuperación? (apto/no apto): no apto Tu nota de Programación es 4.5
             """;
+
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("What was the result of the first test?");
         question.add("What was the result of the second test?");
         question.add("What was the result of the recuperacion? apto/no apto");

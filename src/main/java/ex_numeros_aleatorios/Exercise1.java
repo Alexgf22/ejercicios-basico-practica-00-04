@@ -1,4 +1,4 @@
-package ex_numAleatorios;
+package ex_numeros_aleatorios;
 
 import exercise.Exercise;
 import ui.IO;
@@ -9,6 +9,11 @@ public class Exercise1 extends Exercise {
             Escribe un programa que muestre la tirada de tres dados. Se debe mostrar también la suma total
             (los puntos que suman entre los tres dados).
             """;
+
+    {
+        setExerciseName(exerciseName);
+        setDescription(description);
+    }
     public Exercise1(IO io) {
         super(io);
     }

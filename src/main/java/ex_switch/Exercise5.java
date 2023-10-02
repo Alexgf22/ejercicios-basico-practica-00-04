@@ -10,6 +10,11 @@ public class Exercise5 extends Exercise {
     String exerciseName = "Exercise 5";
     String description = "Realiza un programa que resuelva una ecuación de primer grado (del tipo ax + b = 0).";
 
+    {
+        setExerciseName(exerciseName);
+        setDescription(description);
+    }
+
     public Exercise5(IO io) {
         super(io);
     }

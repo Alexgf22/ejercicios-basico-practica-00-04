@@ -1,4 +1,4 @@
-package ex_numAleatorios;
+package ex_numeros_aleatorios;
 
 import exercise.Exercise;
 import ui.IO;
@@ -21,6 +21,11 @@ public class Exercise15 extends Exercise {
             la re mi sol | fa mi mi si | do la sol fa | fa re si sol | do sol mi re | fa la do la ||
                         
             """;
+
+    {
+        setExerciseName(exerciseName);
+        setDescription(description);
+    }
 
     ArrayList<String> notes = new ArrayList<String>();
     {

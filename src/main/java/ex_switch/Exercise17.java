@@ -10,7 +10,10 @@ public class Exercise17 extends Exercise {
 
     String exerciseName = "Exercise17";
     String description = "Escribe un programa que diga cuál es la última cifra de un número entero introducido por teclado.";
+
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("Inntroduce a number");
     }
 

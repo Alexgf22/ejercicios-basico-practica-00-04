@@ -14,6 +14,8 @@ public class Exercise17 extends Exercise {
             positivo).
             """;
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("Enter a number");
     }
     public Exercise17(IO io) {

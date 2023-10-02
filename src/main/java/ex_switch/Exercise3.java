@@ -14,6 +14,8 @@ public class Exercise3 extends Exercise {
             """;
 
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("Choose a number between 1 and 7 to see which day of the week it corresponds to.");
     }
 

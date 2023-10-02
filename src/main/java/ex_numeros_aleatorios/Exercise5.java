@@ -1,13 +1,17 @@
-package ex_numAleatorios;
+package ex_numeros_aleatorios;
 
 import exercise.Exercise;
 import ui.IO;
-import java.util.Random;
 
 public class Exercise5 extends Exercise {
     String exerciseName = "Exercise 5";
     String description = "Muestra 50 números enteros aleatorios entre 100 y 199 (ambos incluidos) separados por espacios.\n" +
             "Muestra también el máximo, el mínimo y la media de esos números.";
+
+    {
+        setExerciseName(exerciseName);
+        setDescription(description);
+    }
     public Exercise5(IO io) {
         super(io);
     }

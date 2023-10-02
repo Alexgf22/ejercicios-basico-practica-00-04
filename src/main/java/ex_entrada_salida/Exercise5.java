@@ -12,6 +12,8 @@ public class Exercise5 extends Exercise {
     String description = "Escribe un programa que calcule el área de un rectángulo.";
 
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("Enter length");
         question.add("Enter width");
     }

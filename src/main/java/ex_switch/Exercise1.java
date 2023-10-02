@@ -12,6 +12,8 @@ public class Exercise1 extends Exercise {
             "primera hora ese día.";
 
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("Type the day of which you want to know the first class.");
     }
 

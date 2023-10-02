@@ -3,22 +3,32 @@ package group;
 import exercise.Exercise;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Group {
     private ArrayList<Exercise> exerciseList = new ArrayList<>();
-    private String name;
-    private String description;
+    protected String name;
+    protected String description;
 
-    public void add(Exercise exercise) {
-        exerciseList.add(exercise);
+    public void add(Exercise... exercises) {
+        exerciseList.addAll(Arrays.asList(exercises));
     }
+
     public Object getName() {
-        return this.name;
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
-        return this.description;
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public List<Exercise> getExercises() {

@@ -10,6 +10,8 @@ public class Exercise9 extends Exercise {
     String exerciseName = "Exerciser 9";
     String description = "Realiza un programa que nos diga cuántos dígitos tiene un número introducido por teclado.";
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("Introduce a number to see how many digits it has.");
     }
     public Exercise9(IO io) {

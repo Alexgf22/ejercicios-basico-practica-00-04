@@ -11,6 +11,8 @@ public class Exercise11 extends Exercise {
     String description = "Escribe un programa que dada una hora determinada (horas y minutos), calcule los segundos que\n" +
             "faltan para llegar a la medianoche.";
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("Type the current hour");
         question.add("Type the current minute");
     }

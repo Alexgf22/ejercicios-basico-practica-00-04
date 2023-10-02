@@ -1,4 +1,4 @@
-package ex_numAleatorios;
+package ex_numeros_aleatorios;
 
 import exercise.Exercise;
 import ui.IO;
@@ -8,6 +8,10 @@ public class Exercise13 extends Exercise {
     String description = "Escribe un programa que simule la tirada de dos dados. El programa deberá continuar tirando los\n" +
             "dados una y otra vez hasta que en alguna tirada los dos dados tengan el mismo valor.";
 
+    {
+        setExerciseName(exerciseName);
+        setDescription(description);
+    }
     public Exercise13(IO io) {
         super(io);
     }

@@ -4,9 +4,10 @@ import exercise.Exercise;
 import ui.IO;
 
 public class Exercise3 extends Exercise {
-    String exerciseName = "Exercise 3";
-    String description = "Muestra los números múltiplos de 5 de 0 a 100 utilizando un bucle do-while .";
-
+    {
+        setExerciseName("Exercise 3");
+        setDescription("\"Muestra los números múltiplos de 5 de 0 a 100 utilizando un bucle do-while.");
+    }
 
     public Exercise3(IO io) {
         super(io);

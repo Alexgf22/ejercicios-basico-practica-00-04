@@ -16,6 +16,8 @@ public class Exercise21 extends Exercise {
             """;
 
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("Enter a number");
     }
 

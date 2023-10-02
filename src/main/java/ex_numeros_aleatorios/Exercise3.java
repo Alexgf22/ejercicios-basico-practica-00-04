@@ -1,9 +1,8 @@
-package ex_numAleatorios;
+package ex_numeros_aleatorios;
 
 import exercise.Exercise;
 import ui.IO;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Exercise3 extends Exercise {
@@ -18,6 +17,10 @@ public class Exercise3 extends Exercise {
             4, 5, 6, 7, sota, caballo, rey y as.
             """;
 
+    {
+        setExerciseName(exerciseName);
+        setDescription(description);
+    }
     ArrayList<String> cards = new ArrayList<String>();
 
     {

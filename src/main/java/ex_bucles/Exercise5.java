@@ -4,8 +4,10 @@ import exercise.Exercise;
 import ui.IO;
 
 public class Exercise5 extends Exercise {
-    String exerciseName = "Exercise 5";
-    String description = "Muestra los números del 320 al 160, contando de 20 en 20 hacia atrás utilizando un bucle while .";
+    {
+        setExerciseName("Exercise 5");
+        setDescription("Muestra los números del 320 al 160, contando de 20 en 20 hacia atrás utilizando un bucle while.");
+    }
 
     public Exercise5(IO io) {
         super(io);

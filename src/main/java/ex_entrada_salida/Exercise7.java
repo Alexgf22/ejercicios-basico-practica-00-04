@@ -12,6 +12,8 @@ public class Exercise7 extends Exercise {
     String description = "Escribe un programa que calcule el total de una factura a partir de la base imponible.";
 
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("How much was the bill?");
         question.add("How much is the tax?");
     }

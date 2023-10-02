@@ -10,7 +10,10 @@ public class Exercise9 extends Exercise {
 
     String exerciseName = "Exercise 9";
     String description = "Escribe un programa que calcule el volumen de un cono según la fórmula";
+
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("Introduce the radius of the cone");
         question.add("Introduce the height of the cone");
     }

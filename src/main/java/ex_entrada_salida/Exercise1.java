@@ -10,14 +10,16 @@ public class Exercise1 extends Exercise {
         super(io);
     }
 
+    String exerciseName = "Exercise 1";
+    String description = "Realiza un programa que pida dos números y que luego muestre el resultado de su multiplica";
+
     //TODO Check this method of init blocks using sonarLint
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("Enter first number: ");
         question.add("Enter second number: ");
     }
-
-    String exerciseName = "Exercise 1";
-    String description = "Realiza un programa que pida dos números y que luego muestre el resultado de su multiplicación.";
 
     public void run() {
             ArrayList<String> inputs = getInputs();

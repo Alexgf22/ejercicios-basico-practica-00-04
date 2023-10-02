@@ -14,10 +14,12 @@ public class Exercise7 extends Exercise {
             “Lo siento, esa no es la combinación” y si acertamos se nos dirá “La caja fuerte se ha abierto
             satisfactoriamente”. Tendremos cuatro oportunidades para abrir la caja fuerte.
             """;
+
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("Input a combination to attempt to open the safe.");
     }
-
     public Exercise7(IO io) {
         super(io);
     }

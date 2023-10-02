@@ -8,8 +8,10 @@ import java.util.Collections;
 
 public class Exercise13 extends Exercise {
     String exerciseName = "Exerecise 13";
-    String descreiption = "Escribe un programa que ordene tres números enteros introducidos por teclado.";
+    String description = "Escribe un programa que ordene tres números enteros introducidos por teclado.";
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("Introduce the first number");
         question.add("Introduce the second number");
         question.add("Introduce the third number");

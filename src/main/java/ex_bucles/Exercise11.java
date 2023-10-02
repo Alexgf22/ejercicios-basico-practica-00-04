@@ -11,6 +11,8 @@ public class Exercise11 extends Exercise {
     String description = "Escribe un programa que muestre en tres columnas, el cuadrado y el cubo de los 5 primeros\n" +
             "números enteros a partir de uno que se introduce por teclado.";
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("Introduce a number");
     }
 

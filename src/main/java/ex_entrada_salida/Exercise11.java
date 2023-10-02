@@ -10,6 +10,8 @@ public class Exercise11 extends Exercise {
     String exerciseName = "Exercise 11";
     String description = "Realiza un conversor de Kb a Mb.";
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("Input the amount of Kb: ");
     }
 

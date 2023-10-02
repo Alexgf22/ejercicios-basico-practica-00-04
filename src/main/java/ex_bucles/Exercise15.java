@@ -15,6 +15,8 @@ public class Exercise15 extends Exercise {
             el 2 y el 5, se deberán mostrar 2 1 , 2 2 , 2 3 , 2 4 y 2 5 .46 Bucles
             """;
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("Enter a base number");
         question.add("Enter an exponent");
     }

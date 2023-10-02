@@ -4,17 +4,17 @@ import exercise.*;
 import ui.IO;
 
 public class Exercise3 extends Exercise {
-
-    private String name = "Maurice Darner";
-    private String address = "Calle Corrdera 42";
-    private String phone = "686-336-555";
-
-    String exerciseName = "Exercise 3";
-    String description = """
+    {
+        setExerciseName("Exercise 3");
+        setDescription("""
 Crea las variables nombre, direccion y telefono y asígnale los valores corres- pondientes.
 Muestra
 los valores de esas variables por pantalla de tal forma que el resultado del programa sea el mismo
-que en el ejercicio 2.""";
+que en el ejercicio 2.""");
+    }
+    private String name = "Maurice Darner";
+    private String address = "Calle Corrdera 42";
+    private String phone = "686-336-555";
 
     public Exercise3(IO io) {
         super(io);

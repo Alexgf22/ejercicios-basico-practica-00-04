@@ -1,113 +1,111 @@
 package main;
 
-import ex_basicos.*;
-import ex_entrada_salida.Exercise11;
-import ex_entrada_salida.Exercise13;
-import ex_entrada_salida.Exercise7;
-import ex_entrada_salida.Exercise9;
-import group.Group;
+
+import group.*;
 import menu.Menu;
 import ui.IO;
 import ui.Validation;
-import exercise.*;
 import ui.console.Consoleio;
-
 import java.util.ArrayList;
+import java.util.Objects;
 
 //TODO I think the way I get and use the inputs could be improved
 public class Main {
     public static void main(String[] args) {
 
+        boolean running = false;
         IO io = new Consoleio();
         Validation validation = new Validation();
 
-        final Group groupBasico = new Group();
-        {
-            groupBasico.add(new Exercise1(io));
-            groupBasico.add(new Exercise3(io));
-            groupBasico.add(new Exercise5(io));
-        }
+        final Group groupBasico = new GroupBasicos();
+        groupBasico.add(
+                new ex_basicos.Exercise1(io),
+                new ex_basicos.Exercise3(io),
+                new ex_basicos.Exercise5(io)
+        );
 
-        final Group groupEntradaSalida = new Group();
-        {
-            groupEntradaSalida.add(new Exercise1(io));
-            groupEntradaSalida.add(new Exercise3(io));
-            groupEntradaSalida.add(new Exercise5(io));
-            groupEntradaSalida.add(new Exercise7(io));
-            groupEntradaSalida.add(new Exercise9(io));
-            groupEntradaSalida.add(new Exercise11(io));
-            groupEntradaSalida.add(new Exercise13(io));
-        }
+        final Group groupEntradaSalida = new GroupEntradaSalida();
+        groupEntradaSalida.add(
+                new ex_entrada_salida.Exercise1(io),
+                new ex_entrada_salida.Exercise3(io),
+                new ex_entrada_salida.Exercise5(io),
+                new ex_entrada_salida.Exercise7(io),
+                new ex_entrada_salida.Exercise9(io),
+                new ex_entrada_salida.Exercise11(io),
+                new ex_entrada_salida.Exercise13(io)
+        );
 
-        final Group groupSwitch = new Group();
-        {
-            groupSwitch.add(new Exercise1(io));
-            groupSwitch.add(new Exercise3(io));
-            groupSwitch.add(new Exercise5(io));
-            groupSwitch.add(new Exercise7(io));
-            groupSwitch.add(new Exercise9(io));
-            groupSwitch.add(new Exercise11(io));
-            groupSwitch.add(new Exercise13(io));
-        }
-        ArrayList<Group> groups = new ArrayList<Group>();
+        final Group groupSwitch = new GroupSwitch();
+        groupSwitch.add(
+                new ex_switch.Exercise1(io),
+                new ex_switch.Exercise3(io),
+                new ex_switch.Exercise5(io),
+                new ex_switch.Exercise7(io),
+                new ex_switch.Exercise9(io),
+                new ex_switch.Exercise11(io),
+                new ex_switch.Exercise13(io),
+                new ex_switch.Exercise15(io),
+                new ex_switch.Exercise17(io),
+                new ex_switch.Exercise19(io),
+                new ex_switch.Exercise21(io)
+        );
+
+        final Group groupBucles = new GroupBucles();
+        groupBucles.add(
+                new ex_bucles.Exercise1(io),
+                new ex_bucles.Exercise3(io),
+                new ex_bucles.Exercise5(io),
+                new ex_bucles.Exercise7(io),
+                new ex_bucles.Exercise9(io),
+                new ex_bucles.Exercise11(io),
+                new ex_bucles.Exercise13(io),
+                new ex_bucles.Exercise15(io),
+                new ex_bucles.Exercise17(io),
+                new ex_bucles.Exercise19(io),
+                new ex_bucles.Exercise21(io)
+        );
+
+        final Group groupNumAleatorios = new GroupNumerosAleatorios();
+        groupNumAleatorios.add(
+                new ex_numeros_aleatorios.Exercise1(io),
+                new ex_numeros_aleatorios.Exercise3(io),
+                new ex_numeros_aleatorios.Exercise5(io),
+                new ex_numeros_aleatorios.Exercise7(io),
+                new ex_numeros_aleatorios.Exercise9(io),
+                new ex_numeros_aleatorios.Exercise11(io),
+                new ex_numeros_aleatorios.Exercise13(io),
+                new ex_numeros_aleatorios.Exercise15(io)
+        );
+
+        ArrayList<Group> groups = new ArrayList<>();
         groups.add(groupBasico);
         groups.add(groupEntradaSalida);
         groups.add(groupSwitch);
+        groups.add(groupBucles);
+        groups.add(groupNumAleatorios);
 
         Menu menu = new Menu(groups, io);
-        boolean running = false;
 
         menu.startMenu();
-        if (io.read() == "y") {
+        if (Objects.equals(io.read(), "y")) {
             running = true;
         }
 
         while (running) {
             io.write("Available options");
             menu.menuListGroups();
-            int group = validation.getInt(io.read());
+            int group = Validation.getInt(io.read());
 
             menu.menuListExercises(group);
-            int number = validation.getInt(io.read());
+            int number = Validation.getInt(io.read());
 
             menu.selectExercise(group, number).run();
 
             io.write("Continue?\ny/n?");
-            if (io.read() == "n") {
+            if (Objects.equals(io.read(), "n")) {
                 running = false;
             }
             menu.exitMenu();
         }
     }
-
-//    public static void start() {
-//        menu.startMenu();
-//        if (io.read() == "y") {
-//            running = true;
-//            runSelection();
-//        }
-//    }
-//
-//    private static void runSelection() {
-//        while (running) {
-//            selection().run();
-//
-//            io.write("Continue?\ny/n?");
-//            if (io.read() == "n") {
-//                running = false;
-//            }
-//        }
-//        menu.exitMenu();
-//    }
-//
-//    private static Exercise selection() {
-//
-//        io.write("Available options");
-//        menu.menuListGroups();
-//        int group = validation.getInt(io.read());
-//        menu.menuListExercises(group);
-//        int number = validation.getInt(io.read());
-//
-//        return menu.selectExercise(group, number);
-//    }
 }

@@ -16,6 +16,8 @@ public class Exercise13 extends Exercise {
             """;
 
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("Introduce the marks of the first exam");
         question.add("What marks would do you want for the trimester?");
     }

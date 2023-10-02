@@ -11,6 +11,8 @@ public class Exercise7 extends Exercise {
             Realiza un programa que calcule la media de tres notas. 35Sentencia condicional ( if y switch )
             """;
     {
+        setExerciseName(exerciseName);
+        setDescription(description);
         question.add("Type the first mark");
         question.add("Type the second mark");
         question.add("Type the third mark");
