@@ -1,8 +1,10 @@
 package menu;
 
+import exceptions.InvalidInputException;
 import exercise.Exercise;
 import group.Group;
 import ui.IO;
+import ui.Validation;
 
 import java.util.ArrayList;
 
@@ -27,14 +29,15 @@ public class Menu {
     /**
      * Display a list of available exercise groups.
      */
-    public void menuListGroups() {
+    public void listGroups() {
         int i = 0;
         for (Group group : allGroups) {
-            io.write(String.format("%d - %s\n", i, group.getName()));
+            io.write(String.format("%d - %s", i, group.getName()));
             io.write(group.getDescription());
             io.write("\n");
             i = i + 1;
         }
+        io.write("Please enter the number of the group you wish to select\n");
     }
 
     /**
@@ -42,16 +45,33 @@ public class Menu {
      *
      * @param group The index of the selected exercise group.
      */
-    public void menuListExercises(int group) {
+    public void listExercises(Group group) {
         int i = 0;
-        for (Exercise exercise : allGroups.get(group).getExercises()) {
-            io.write(String.format("%d - %s\n", i, exercise.getExerciseName()));
+        for (Exercise exercise : group.getExercises()) {
+            io.write(String.format("%d - %s", i, exercise.getExerciseName()));
             io.write(exercise.getDescription());
             io.write("\n");
             i = i + 1;
         }
+        io.write("Please enter the number of the exercise you wish to select\n");
     }
 
+    //TODO Document
+    public Group selectGroup(int group) throws InvalidInputException {
+        Group selectedGroup;
+        try {
+            selectedGroup = allGroups.get(group);
+        } catch (IndexOutOfBoundsException e) {
+            io.write("""
+                    The group you selected was not recognized.
+                    Please select one of the following groups""");
+            listGroups();
+            selectedGroup = selectGroup(io.getInt());
+        }
+        return selectedGroup;
+    }
+
+    //TODO redo documentation
     /**
      * Select and return an exercise from a specified group.
      *
@@ -59,8 +79,18 @@ public class Menu {
      * @param exercise The index of the selected exercise within the group.
      * @return The selected Exercise object.
      */
-    public Exercise selectExercise(int group, int exercise) {
-        return allGroups.get(group).getExercises().get(exercise);
+    public Exercise selectExercise(Group group, int exercise) throws InvalidInputException {
+        Exercise selectedExercise;
+        try {
+            selectedExercise = group.getExercises().get(exercise);
+        } catch (IndexOutOfBoundsException e) {
+            io.write("""
+                    The exercise you selected was not recognized.
+                    Please select one of the following exercises""");
+            listExercises(group);
+            selectedExercise = selectExercise(group, io.getInt());
+        }
+        return selectedExercise;
     }
 
     /**

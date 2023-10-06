@@ -24,13 +24,6 @@ public abstract class Exercise {
     }
 
     /**
-     * Display the description of the exercise.
-     */
-    public void displayDescription() {
-        io.write(description);
-    }
-
-    /**
      * Run the exercise.
      */
     public abstract void run();
