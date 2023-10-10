@@ -2,7 +2,6 @@ package MauriDjango.exercise.ex_basicos;
 
 import MauriDjango.exercise.Exercise;
 import MauriDjango.ui.IO;
-import exercise.*;
 
 import static java.lang.Math.round;
 

@@ -35,14 +35,16 @@ public class Consoleio extends IO {
     }
 
     public int getInt() {
-        int number;
+        int number = 0;
         String input = read();
-        if (Validation.isInt(input)) {
-            number = Integer.parseInt(input);
-        } else {
+        try {
+            if (Validation.isInt(input)) {
+                number = Integer.parseInt(input);
+            }
+        } catch (NumberFormatException e) {
             write("""
-                    The number you entered was not a number.
-                    Please enter a number.""");
+                        The number you entered was not a number.
+                        Please enter a number.""");
             number = getInt();
         }
         return number;

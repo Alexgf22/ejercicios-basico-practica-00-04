@@ -2,7 +2,6 @@ package MauriDjango.exercise.ex_basicos;
 
 import MauriDjango.exercise.Exercise;
 import MauriDjango.ui.IO;
-import exercise.*;
 
 public class Exercise1 extends Exercise {
     private static final int X = 144;

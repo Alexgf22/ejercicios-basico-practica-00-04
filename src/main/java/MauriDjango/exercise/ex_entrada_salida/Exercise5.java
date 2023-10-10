@@ -2,7 +2,6 @@ package MauriDjango.exercise.ex_entrada_salida;
 
 import MauriDjango.exercise.Exercise;
 import MauriDjango.ui.IO;
-import exercise.*;
 
 import java.util.ArrayList;
 

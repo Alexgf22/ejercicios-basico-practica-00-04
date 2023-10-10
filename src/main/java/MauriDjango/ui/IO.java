@@ -3,7 +3,6 @@ package MauriDjango.ui;
 import java.util.ArrayList;
 
 import MauriDjango.exceptions.InvalidInputException;
-import exceptions.*;
 
 /**
  * Abstract class representing Input/Output operations for the application.
@@ -54,7 +53,7 @@ public abstract class IO {
      * @return The integer input provided by the user.
      * @throws InvalidInputException if the user enters a non-integer value.
      */
-    public abstract int getInt() throws InvalidInputException;
+    public abstract int getInt();
 
     /**
      * Convert a string to an integer.

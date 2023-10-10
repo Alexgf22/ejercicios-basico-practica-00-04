@@ -1,17 +1,10 @@
 package MauriDjango.main;
 
-import MauriDjango.exercise.ex_entrada_salida.*;
-import MauriDjango.exercise.ex_switch.Exercise15;
 import MauriDjango.group.*;
 import MauriDjango.menu.Menu;
 import MauriDjango.ui.IO;
 import MauriDjango.exceptions.InvalidInputException;
-import MauriDjango.exercise.Exercise;
-import exercise.ex_numeros_aleatorios.*;
-import MauriDjango.exercise.ex_switch.Exercise17;
-import MauriDjango.exercise.ex_switch.Exercise19;
-import MauriDjango.exercise.ex_switch.Exercise21;
-import group.*;
+import MauriDjango.exercise.*;
 import MauriDjango.ui.console.Consoleio;
 import java.util.ArrayList;
 
@@ -37,13 +30,13 @@ public class Main {
 
         final Group groupEntradaSalida = new GroupEntradaSalida();
         groupEntradaSalida.add(
-                new Exercise1(io),
-                new Exercise3(io),
-                new Exercise5(io),
-                new Exercise7(io),
-                new Exercise9(io),
-                new Exercise11(io),
-                new Exercise13(io)
+                new MauriDjango.exercise.ex_entrada_salida.Exercise1(io),
+                new MauriDjango.exercise.ex_entrada_salida.Exercise3(io),
+                new MauriDjango.exercise.ex_entrada_salida.Exercise5(io),
+                new MauriDjango.exercise.ex_entrada_salida.Exercise7(io),
+                new MauriDjango.exercise.ex_entrada_salida.Exercise9(io),
+                new MauriDjango.exercise.ex_entrada_salida.Exercise11(io),
+                new MauriDjango.exercise.ex_entrada_salida.Exercise13(io)
         );
 
         final Group groupSwitch = new GroupSwitch();
@@ -55,10 +48,10 @@ public class Main {
                 new MauriDjango.exercise.ex_switch.Exercise9(io),
                 new MauriDjango.exercise.ex_switch.Exercise11(io),
                 new MauriDjango.exercise.ex_switch.Exercise13(io),
-                new Exercise15(io),
-                new Exercise17(io),
-                new Exercise19(io),
-                new Exercise21(io)
+                new MauriDjango.exercise.ex_switch.Exercise15(io),
+                new MauriDjango.exercise.ex_switch.Exercise17(io),
+                new MauriDjango.exercise.ex_switch.Exercise19(io),
+                new MauriDjango.exercise.ex_switch.Exercise21(io)
         );
 
         final Group groupBucles = new GroupBucles();
